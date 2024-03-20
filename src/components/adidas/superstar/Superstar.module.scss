@@ -1,0 +1,103 @@
+.Superstar {
+    margin-top: 100px;
+    border-top: 1px solid white;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .sueperstar_text {
+        .title {
+            margin: 0;
+            font-size: 56px;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            text-shadow: 7px -7px  rgb(62, 62, 62);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-weight: 600;
+
+        }
+
+        .icon {
+            font-size: 72px;
+        }
+
+        .list_and_img {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            .chars {
+                padding-left: 20px;
+                list-style:disc;
+                font-weight: 600;
+            }
+
+            img {
+                width: 300px;
+            }
+        }
+    }
+
+    .Swiper {
+        margin: 0;
+        padding: 0;
+        width: 400px;
+        border-radius: 10px;
+        .slider_item {  
+            position: relative;
+            img {
+                border-radius: 10px;
+                width: 100%;
+                background-color: rgba(85, 85, 85, 0.429);
+            }
+            .price {
+                position: absolute;
+                bottom: 0;
+                left: 20px;
+                font-weight: 600;
+                font-size: 24px;
+                color: rgb(255, 255, 255);
+            }
+            .enter_button {
+                position: absolute;
+                bottom: 25px;
+                right: 20px;
+                font-size: 16px;
+                border-radius: 10px;
+                padding: 5px 20px;
+                background-color: none;
+                color: rgb(0, 0, 0);
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 1050px) {
+    .Superstar {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }   
+}
+
+@media (max-width: 500px) {
+    .Superstar {
+        .sueperstar_text {
+            .title {
+                font-size: 34px;
+            }
+            .list_and_img {
+                img {
+                    display: none;
+                }
+            }
+        }
+        .Swiper {
+            width: 300px;
+        }
+    }   
+}

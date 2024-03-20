@@ -1,0 +1,98 @@
+.Basket {
+    min-height: 55vh;
+    .basket_content {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 3fr 1fr;
+    }
+    padding: 0;
+    .product_list {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
+        border-radius: 10px;
+        padding: 0;
+    }
+    .calculation_box {
+        position: sticky;
+        top: 10px;
+        height: 250px;
+        padding: 10px;
+        background-color: var(--block-bg-color);
+        border-radius: 10px;
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+        flex-direction: column;
+        .total_price {
+            span {
+                font-weight: 800;
+                color: var(--link-hover-color);
+            }
+        }
+        .inputs {
+            input {
+                accent-color: var(--link-hover-color);
+                background-color: var(--main-dark-bg-color);
+                border: none;
+                padding: 5px;
+                font-size: 16px;
+                color: white;
+                margin-top: 5px;
+                border-radius: 5px;
+            }
+        }
+
+        .address {
+            .icon {
+                color: var(--link-hover-color);
+            }
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pay_button {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: var(--link-hover-color);
+            justify-self: end;
+        }
+        
+    }
+}
+
+@media (max-width: 970px) {
+    .Basket {
+        .basket_content {
+            display: flex;
+            flex-direction: column;
+            .calculation_box {
+                align-items: start;
+                height: 100%;
+                padding: 20px;
+
+                .inputs {
+                    display: flex;
+                    gap: 20px;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }   
+}
+
+@media (max-width: 540px) {
+    .Basket {
+        .basket_content {
+            .product_list {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

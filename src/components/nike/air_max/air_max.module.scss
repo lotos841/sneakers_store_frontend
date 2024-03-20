@@ -1,0 +1,145 @@
+.Air_max {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: var(--main-dark-text-color);
+    margin-bottom: 150px;
+    .product_info {
+        height: 90vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            margin: 0;
+            font-size: 42px;
+            line-height: 4rem;
+            font-weight: 800;
+
+            span {
+                transition: all 2s ease;
+            }
+        }
+
+        .text {
+            font-size: 16px;
+            font-weight: 600;
+
+            span {
+                transition: all 2s ease;
+            }
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .colors {
+            padding: 0;
+            display: flex;
+            gap: 10px;
+
+            .color {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                transition: all 0.4s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    .air_max_slider {
+        position: relative;
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        
+        transition: all 2s ease;
+        img {
+            position: absolute;
+            right: 50px;
+            transform: rotate(-40deg);
+            width: 500px;
+            animation-name: sneaker-soaring;
+            animation-duration: 2s;
+            animation-timing-function:  ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            z-index: 2;
+            transition: all 0.4s;
+        }
+    }
+}
+
+
+@keyframes sneaker-soaring {
+    0% {
+        top: 50px;
+    }
+    100% {
+        top: 100px;
+        rotate: 3deg;
+    }
+}
+
+@media (max-width: 1100px) {
+    .Air_max {
+        .product_info {
+            .title {
+                font-size: 36px;
+            }
+            .price {
+                font-size: 24px;
+            }
+            .colors {
+                .color {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+        .air_max_slider {
+            width: 350px;
+            height: 350px;
+            img {
+                width: 350px;
+            }
+        }
+    }
+   
+}
+
+@media (max-width: 850px) {
+    .Air_max {
+        flex-direction: column;
+        .air_max_slider {
+            width: 250px;
+            height: 250px;
+            img {
+                width: 250px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .Air_max {
+        .product_info {
+            flex-direction: column;
+            justify-content: center;
+
+            .air_max_slider {
+                width: 300px;
+                height: 300px;
+                img {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}

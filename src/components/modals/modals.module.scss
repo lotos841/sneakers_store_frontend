@@ -1,0 +1,105 @@
+.Modal {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    left: 0;
+    right: 0;
+    top: 130px;
+    text-align: center;
+    z-index: 10;
+    background-color: rgb(50, 50, 50);
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+    gap: 50px;
+
+    button {
+        background-color: var(--main-dark-bg-color);
+        border: none;
+        padding: 10px;
+        color: white;
+        font-size: 14px;
+        max-width: 200px;
+        border-radius: 10px;
+    }
+
+    input {
+        accent-color: var(--link-hover-color);
+        background-color: var(--main-dark-bg-color);
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        color: white;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+
+    .header {
+        border-bottom: 1px solid white;
+    }
+    
+    .body {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+            text-align: left;
+            margin: 0;
+        }
+        .radio {
+            display: flex;
+            input {
+                width: 20px;
+                background-color: cadetblue;
+            }
+        }
+        .info_box {
+            background-color: var(--main-dark-bg-color);
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+            border-radius: 10px;
+            button {
+                color: red;
+                text-align: left;
+            }
+        }
+        .photo {
+            input {
+                display: block;
+            }
+        }
+    }
+  
+
+    .footer {
+        display: flex;
+        gap: 20px;
+        justify-content: end;
+        button {
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 10px;
+            background-color: var(--main-dark-bg-color);
+            color: white;
+            max-width: 300px;
+            font-size: 16px;
+        }
+
+        :nth-child(1) {
+            color: rgb(255, 6, 6);
+            border: 1px solid rgb(255, 6, 6);
+        }
+
+        :nth-child(2) {
+            color: rgb(61, 255, 2);
+            border: 1px solid rgb(61, 255, 2);
+        }
+    }
+}

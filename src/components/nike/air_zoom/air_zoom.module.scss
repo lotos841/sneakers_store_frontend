@@ -1,0 +1,163 @@
+
+.air_zoom {
+    .preview {
+        position: relative;
+        margin: 110px auto;
+        text-align: center;
+        overflow: hidden;
+        margin: 0;
+        .sneakers_img {
+            max-width: 600px;
+            animation: floater 5s infinite;
+            animation-timing-function:  ease-in-out;
+            animation-direction: alternate;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                content: "";
+                width: 150px;
+                height: 150px;
+                background-color: aqua;
+            }
+        }
+        .air_zoom_bg {
+            margin: 0;
+            position: absolute;
+            z-index: -1;
+            top: 00px;
+            font-size: 230px;
+            font-weight: 1000;
+            line-height: 400px;
+            opacity: 0.5;
+            background: linear-gradient(180deg, #fcfcfc 0%, rgb(255, 110, 75) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: line_text 6s linear 1s infinite;
+        }
+        .title {
+            margin: 0;
+            font-weight: 800;
+            font-size: 42px;
+            background: linear-gradient(180deg, #fcfcfc 0%, rgb(255, 110, 75) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: rgba(255, 255, 255, 0.588) 1px 0 10px;
+        }
+
+        .characters {
+            margin-top: 40px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            li {
+                color: rgb(254, 208, 197);
+
+                padding: 10px;
+                border-top: 1px solid rgb(254, 208, 197);
+
+                border-bottom: 1px solid rgb(254, 208, 197);
+                h3 {
+                    font-size: 24px;
+                }
+                .icon {
+                    font-size: 45px;
+                }
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes line_text {
+    from {
+       transform: translateX(115%); 
+       transform-origin: left center;
+    }
+    to {
+       transform: translateX(-115%); 
+       transform-origin: right center;
+    }
+}
+
+@keyframes floater {
+    0%{transform: translateY(-5%);transition: ease 0.5s;}
+    50%{transform: translateY(5%);transition: ease 0.5s;}
+}
+
+@media (max-width: 1170px) {
+    .air_zoom {
+        .preview {
+            .air_zoom_bg {
+                font-size: 160px;
+            }
+        }
+    }
+   
+}
+
+@media (max-width: 840px) {
+    .air_zoom {
+        .preview {
+            .sneakers_img {
+                width: 400px;
+            }
+            .characters {
+                h3 {
+                    font-size: 18px;
+                }
+                p {
+                    font-size: 14px;
+                }   
+            }
+            .title {
+                font-size: 28px;
+            }
+            .air_zoom_bg {
+                font-size: 120px;
+            }
+        }
+    }
+   
+}
+
+@media (max-width: 645px) {
+    .air_zoom {
+        .preview {
+            .characters {
+                flex-direction: column;
+                li {
+                    border-bottom: 1px solid;
+                }
+            }
+            .air_zoom_bg {
+                font-size: 80px;
+            }
+        }
+    }
+   
+}
+
+@media (max-width: 450px) {
+    .air_zoom {
+        .preview {
+            .sneakers_img {
+                width: 300px;
+            }
+            .title {
+                font-size: 24px;
+            }
+            .air_zoom_bg {
+                top: -50px;
+                font-size: 50px;
+            }
+        }
+    }
+}

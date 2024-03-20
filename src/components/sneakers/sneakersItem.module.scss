@@ -1,0 +1,112 @@
+.SneakersItem {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--block-bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    img {
+        width: 80%;
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }
+    .name {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        z-index: 2;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--link-hover-color);
+        }
+    }
+    .size {
+        font-weight: 600;
+        position: absolute;
+        top: -5px;
+        right: 15px;
+        z-index: 2;
+    }
+    .price {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        margin: 0;
+        padding: 0;
+        font-weight: 300;
+        color: rgb(255, 255, 255);
+        z-index: 2;
+    }
+    .color {
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        transition: all 0.4s ease;
+    }
+
+    .delete_button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        left: 10px;
+        top: 10px;
+        z-index: 2;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        
+        .icon {
+            font-size: 24px;
+        }
+
+        &:hover {
+            background-color: red;
+        }
+    }
+}
+
+@media (max-width: 740px) {
+    .SneakersItem {
+       height: 200px;
+    }
+}
+
+@media (max-width: 740px) {
+    .SneakersItem {
+       height: 200px;
+    }
+}
+
+@media (max-width: 540px) {
+    .SneakersItem {
+       height: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    .SneakersItem {
+       height: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    .SneakersItem {
+       height: 200px;
+    }
+}

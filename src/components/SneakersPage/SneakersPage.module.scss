@@ -1,0 +1,193 @@
+.SneakersPage {
+    .main {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 50px;
+        .slide {
+            background-color: var(--block-bg-color);
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 100%;
+            }
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--block-bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            .title {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 0;
+            }
+            .price {
+                font-size: 23px;
+            }
+            .sizes_list {
+                padding: 0;
+                display: flex;
+                gap: 5px;
+                border-radius: 10px;
+                li {
+                    background-color: white;
+                    margin: 0;
+                    color: black;
+                    padding: 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color:  var(--link-hover-color);
+                        color: white;
+                    }
+                }
+            }
+            .buttons {
+                margin-top: 30px;
+                display: flex;
+                gap: 20px;
+                .button {
+                    position: relative;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    background-color: var(--link-hover-color);
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+    .chars_anothers {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        .specifications {
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 400px;
+
+            .characteristic {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0px 10px;
+                background-color: var(--block-bg-color);
+                border-radius: 10px;
+                margin-top: 10px;
+                .description {
+                    justify-self: end;
+                    text-align: left;
+                }
+            }
+        }
+        .anothers {
+            padding: 0;
+            display: flex;
+            gap: 10px;
+            justify-content: start;
+            row-gap: 25px;
+            flex-wrap: wrap;
+            border-radius: 10px;
+
+            .another_item {
+                position: relative;
+                width: 200px;
+                height: 150px;
+                overflow: hidden;
+                border-radius: 10px;
+                background-color: var(--block-bg-color);
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    transition: all 0.4s ease;
+                    z-index: 2;
+                }
+                .decor {
+                    position: absolute;
+                    top: -20px;
+                    right: -20px;
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    transition: 0.4s ease;
+                    z-index: 1;
+                }
+
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                    }
+
+                    .decor {
+                        top: 0;
+                        right: 0;
+                        border-radius: 0;
+                        width: 100%;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .SneakersPage {
+        .main {
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .SneakersPage {
+        .main {
+            grid-template-columns: 1fr;
+        }
+        .chars_anothers {
+            .specifications{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 490px) {
+    .SneakersPage {
+        .main {
+            .info {
+                .sizes_list {
+                    flex-wrap: wrap;
+                    gap: 5px;
+                }
+            }
+            .buttons {
+                justify-content: space-between;
+            }
+            
+        }
+        .chars_anothers {
+            .anothers {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .another_item {
+                    width: auto;
+                    height: 150px;
+                }
+            }
+        }
+    }
+}

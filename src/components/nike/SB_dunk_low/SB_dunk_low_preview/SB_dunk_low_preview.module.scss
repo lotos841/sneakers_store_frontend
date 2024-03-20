@@ -1,0 +1,214 @@
+.SB_preview {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    .sneakers_img {
+        width: 500px;
+        height: 500px;
+        position: relative;
+        user-select: none;
+
+        img {
+            position: absolute;
+            width: 100%;
+            transition: all 0.4s ease;
+
+            &:nth-child(1) {
+                top: 0;
+                left: 0;
+                transform: rotate(45deg);
+                
+            }
+            &:nth-child(2) {
+                top: 120px;
+                left: -140px;
+                transform: rotate(-135deg);
+            }
+        }
+
+        &::after {
+            opacity: 0;
+            position: absolute;
+            content: "SB DUNK LOW";
+            font-size: 52px;
+            background: -webkit-linear-gradient(rgb(208, 255, 1), rgb(90, 232, 255) 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 10px;
+            font-weight: 800;
+            top: 170px;
+            left: -40px;
+            transform: rotate(45deg);
+            transition: 0.6s ease;
+            text-shadow: 5px 5px 5px #8d8d8d82;
+        }
+        
+        &:hover {
+
+            img {
+
+                &:nth-child(1) {
+                    top: -20px;
+                    left: 30px;
+                    
+                }
+                &:nth-child(2) {
+                    top: 140px;
+                    left: -170px;
+                }
+            }
+
+            .decor {
+                span {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+        .decor {
+            width: 500px;
+            position: absolute;
+            z-index: -1;
+            span {
+                position: absolute;
+                display: block;
+                background: linear-gradient(rgb(208, 255, 1), rgb(90, 232, 255));
+                background: radial-gradient(circle at 100px 20px, rgb(208, 255, 1) 0%,rgb(90, 232, 255)60%, #000 90%);
+                width: 90px;
+                border-radius: 50%;
+                height: 90px;
+                transition: all 0.4s ease;
+                &:nth-child(1) {
+                    top: -50px;
+                    left: 50px;
+
+                    animation: floater1 4s infinite;
+                    animation-timing-function:  ease-in-out;
+                    animation-direction: alternate;
+                }
+
+                &:nth-child(2) {
+                    top: 300px;
+                    left: -20px;
+                    
+                    animation: floater2 4s infinite;
+                    animation-timing-function:  ease-in-out;
+                    animation-direction: alternate;
+                }
+
+                &:nth-child(3) {
+                    top: 100px;
+                    right: 100px;
+                    
+                    animation: floater3 4s infinite;
+                    animation-timing-function:  ease-in-out;
+                    animation-direction: alternate;
+                }
+            }
+        }
+    }
+    .info {
+        .title {
+            margin: 0;
+            background: -webkit-linear-gradient(rgb(208, 255, 1), rgb(90, 232, 255) 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 46px;
+        }
+        .text {
+            font-size: 24px;
+            span {
+                font-weight: 700;
+                background: -webkit-linear-gradient(rgb(208, 255, 1), rgb(90, 232, 255) 80%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .specifications {
+            margin: 0;
+            padding: 0;
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 24px;
+                margin-top: 10px;
+                .icon {
+                    padding: 5px;
+                    border-radius: 50%;
+                    color: rgb(37, 37, 37);
+                    background: linear-gradient(rgb(208, 255, 1), rgb(90, 232, 255));
+                }
+            }
+        }
+
+        .buy_button {
+            display: inline-block;
+            margin-top: 40px;
+            font-size: 24px;
+            border-width: 2px;
+            border-style: solid;
+            border-image: linear-gradient(to right, rgb(208, 255, 1), rgb(90, 232, 255)) 1;
+            background: none;
+            padding: 10px 30px;
+            color: white;
+            transition: all 0.4s ease;
+            &:hover {
+                transform: scale(0.95);
+            }
+        }
+    }
+}
+
+@keyframes floater1 {
+    0%{
+        transform: translateY(-10%) translateX(-10%);
+        transition: ease 0.5s;
+    }
+    50%{
+        transform: translateY(10%) translateX(10%);
+        transition: ease 0.5s;
+    }
+}
+@keyframes floater2 {
+    0%{
+        transform: translateY(-10%) translateX(-10%);
+        transition: ease 0.5s;
+    }
+    60%{
+        transform: translateY(10%) translateX(10%);
+        transition: ease 0.5s;
+    }
+}
+@keyframes floater3 {
+    0%{
+        transform: translateY(-10%) translateX(-10%);
+        transition: ease 0.5s;
+    }
+    70%{
+        transform: translateY(10%) translateX(10%);
+        transition: ease 0.5s;
+    }
+}
+
+@media (max-width: 950px) {
+    .SB_preview {
+        flex-direction: column;
+        align-items: center;
+        .sneakers_img {
+            margin-left: 100px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .SB_preview {
+        .sneakers_img {
+            display: none;
+        }
+    }
+}
