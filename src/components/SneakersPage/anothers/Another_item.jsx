@@ -12,6 +12,7 @@ const Another_item = ({data, getData, setIsAdded}) => {
         navigate (`/sneakers/${data.id}`)
         getData()
         setIsAdded(false)
+        window.location.reload();
     }
 
     return (

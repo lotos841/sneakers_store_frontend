@@ -20,7 +20,9 @@ const App = observer(() => {
   }, [])
 
   if (loading) {
-    return <>loading</>
+    return <>
+      <h1 style={{textAlign: 'center'}}>Загрузка...</h1>
+    </>
   }
 
   return (
