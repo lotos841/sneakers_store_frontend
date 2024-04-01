@@ -4,7 +4,7 @@ import Nmd from './Nmd/Nmd'
 
 const Adidas = () => {
     return (
-      <div className='container' id='adidas'>
+      <div className='container' style={{overflow: 'hidden'}} id='adidas'>
           <Superstar/>
           <Nmd/>
       </div>
