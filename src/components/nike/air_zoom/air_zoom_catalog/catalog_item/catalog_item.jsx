@@ -2,7 +2,7 @@ import React from 'react'
 import Classes from '../air_zoom_catalog.module.scss'
 import { useNavigate } from 'react-router-dom'
 
-const src = 'http://localhost:5000/'
+const src = process.env.REACT_APP_API_URL
 
 const Air_zoom_item = ({item_data}) => {
 

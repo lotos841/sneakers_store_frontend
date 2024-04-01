@@ -3,7 +3,7 @@ import Classes from '../air_max_catalog.module.scss'
 import { useNavigate } from 'react-router-dom'
 
 
-const src = 'http://localhost:5000/'
+const src = process.env.REACT_APP_API_URL
 
 const Air_max_catalog_item = ({item_data}) => {
 

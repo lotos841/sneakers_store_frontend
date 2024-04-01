@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Another_item = ({data, getData, setIsAdded}) => {
 
-    const src = 'http://localhost:5000/'
+    const src = process.env.REACT_APP_API_URL
     const navigate = useNavigate()
 
     function handleClick() {

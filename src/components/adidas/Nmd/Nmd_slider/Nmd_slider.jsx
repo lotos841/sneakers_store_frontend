@@ -8,8 +8,8 @@ import Classes from '../Nmd.module.scss'
 import { EffectCards } from 'swiper/modules';
 import axios from 'axios';
 
-const src = `http://localhost:5000/api/sneakers?typeId=8&brandId=2`
-const img_src = 'http://localhost:5000/'
+const src = `${process.env.REACT_APP_API_URL}api/sneakers?typeId=5&brandId=5`
+const img_src = process.env.REACT_APP_API_URL
 
 const Nmd_slider = () => {
 

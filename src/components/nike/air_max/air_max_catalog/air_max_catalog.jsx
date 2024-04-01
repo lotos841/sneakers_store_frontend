@@ -3,7 +3,8 @@ import Classes from './air_max_catalog.module.scss'
 import Air_max_catalog_item from './air_max_item/air_max_catalog_item'
 import axios from 'axios'
 
-const src = `http://localhost:5000/api/sneakers?typeId=1&brandId=1`
+const src = `${process.env.REACT_APP_API_URL}api/sneakers?typeId=1&brandId=4`
+
 
 const Air_max_catalog = () => {
 

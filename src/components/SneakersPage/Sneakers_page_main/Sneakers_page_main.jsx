@@ -69,7 +69,7 @@ const Sneakers_page_main = () => {
                 <Specifications info={sneakers.info}/>
                 {sneakers.typeId && sneakers.brandId && 
                 <Anothers 
-                    src={`http://localhost:5000/api/sneakers?typeId=${sneakers.typeId}&brandId=${sneakers.brandId}`}
+                    src={`${process.env.REACT_APP_API_URL}api/sneakers?typeId=${sneakers.typeId}&brandId=${sneakers.brandId}`}
                     getData={getData}
                     setIsAdded={setIsAdded}
                 />}

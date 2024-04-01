@@ -7,7 +7,7 @@ import Catalog_item from './dunk_low_item/dunk_low_item'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-const src = `http://localhost:5000/api/sneakers?typeId=2&brandId=1`
+const src = `${process.env.REACT_APP_API_URL}api/sneakers?typeId=2&brandId=4`
 
 const SB_dunk_low_catalog = () => {
 

@@ -7,7 +7,7 @@ import Catalog_item from './catalog_item/catalog_item'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-const src = `http://localhost:5000/api/sneakers?typeId=3&brandId=1`
+const src = `${process.env.REACT_APP_API_URL}api/sneakers?typeId=3&brandId=4`
 
 const Air_zoom_catalog = () => {
 
