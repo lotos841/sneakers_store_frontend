@@ -1,10 +1,15 @@
 import React from 'react'
 import Classes from '../Header.module.scss';
 import { PiSneakerMoveLight } from "react-icons/pi";
+import { Link } from 'react-router-dom';
 
 const Logo = () => {
   return (
-    <h3 className={Classes.logo}><p>SN SHOP</p> <PiSneakerMoveLight className={Classes.icon}/></h3>
+    <Link className={Classes.logo} to="/">
+      <p>SN SHOP</p> 
+      <PiSneakerMoveLight className={Classes.icon}/>
+    </Link>
+    
   )
 }
 

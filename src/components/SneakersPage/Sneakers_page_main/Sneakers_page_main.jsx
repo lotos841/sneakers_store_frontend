@@ -29,7 +29,7 @@ const Sneakers_page_main = () => {
     useEffect(() => {
         getData()
     }, [])
-
+    
     return (
         <div className={Classes.SneakersPage}>
             <div className={Classes.main}>

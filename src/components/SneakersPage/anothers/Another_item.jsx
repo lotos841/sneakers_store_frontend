@@ -12,6 +12,10 @@ const Another_item = ({data, getData, setIsAdded}) => {
         navigate (`/sneakers/${data.id}`)
         getData()
         setIsAdded(false)
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        }) 
     }
 
     return (
